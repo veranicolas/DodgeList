@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react'
 import './App.css';
+import { Box } from '@mui/material'
+import { FormField } from './components/Form';
 
-function App() {
+const App = () =>{
+
+  const [match, setMatch] = useState(undefined)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className='mainBox'>
+      <Box className='secondaryBox'>
+        <h1>DodgeList</h1>
+        <FormField setMatch={setMatch}/>
+        {
+          match !== undefined ? 
+          (
+            <div className='dodgeBox'>
+              <p>Dodgealo al puto</p>
+            </div>
+          ) 
+          : 
+          (<></>)
+        }
+      </Box>
+    </Box>
   );
 }
 
