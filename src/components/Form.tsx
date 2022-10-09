@@ -1,17 +1,17 @@
 import { Button, FormControl, TextField } from '@mui/material'
 import { useState } from 'react'
-import { cleanupData, compareData, saveData } from '../services/dataHandling'
+import { compareData, saveData } from '../services/dataHandling'
 
 import './Form.css'
 
 const FormField = ({setMatch}:any) =>{
 
-    const [hijodeputa, setHijodeputa] = useState('')
+    const [maldito, setMaldito] = useState('')
     const [busqueda, setBusqueda] = useState('')
 
     const handleSubmit = () =>{
-        console.log(hijodeputa)
-        saveData(hijodeputa)
+        console.log(maldito)
+        saveData(maldito)
     }
 
     const handleSubmitSearch = () =>{
@@ -29,20 +29,20 @@ const FormField = ({setMatch}:any) =>{
             <FormControl className='formContainer'>
                 <TextField
                     variant="outlined" 
-                    onChange={(event)=> { setHijodeputa(event.target.value)}}
-                    placeholder='Ingrese al hijo de puta' 
+                    onChange={(event)=> { setMaldito(event.target.value)}}
+                    placeholder='Ingrese al maldito' 
                     label="Agregar"
                 />
-                <Button variant="contained" onClick={handleSubmit}>Agregar al desgraciado</Button>
+                <Button variant="contained" onClick={handleSubmit}>Agregar al maldito</Button>
             </FormControl>
             <FormControl className='formContainer'>
                 <TextField
                     label="Buscar"
                     variant="outlined" 
                     onChange={(event)=> { setBusqueda(event.target.value)}}
-                    placeholder='Ingrese al hijo de puta' 
+                    placeholder='Ingrese al maldito' 
                 />
-                <Button variant="contained" onClick={handleSubmitSearch}>Busque al desgraciado</Button>
+                <Button variant="contained" onClick={handleSubmitSearch}>Busque al maldito</Button>
             </FormControl>
         </div>
     )

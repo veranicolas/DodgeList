@@ -16,7 +16,7 @@ const App = () =>{
           match !== undefined ? 
           (
             <div className='dodgeBox'>
-              <p>Dodgealo al puto</p>
+              <p>DODGEA ESE LOBBY</p>
             </div>
           ) 
           : 
