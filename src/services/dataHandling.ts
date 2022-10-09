@@ -1,10 +1,10 @@
 
-const mockData = `Otto Bototo se unió a la sala
+/* const mockData = `Otto Bototo se unió a la sala
 bera se unió a la sala
 purlow se unió a la sala
 PIOJOschpeir se unió a la sala
 tonyHikariTwo se unió a la sala`
-
+ */
 const saveData = (summoner:string) =>{
 
     const blockedFellas = localStorage.getItem('blockedFellas')
