@@ -1,6 +1,6 @@
 import { Button, FormControl, TextField } from '@mui/material'
 import { useState } from 'react'
-import { compareData, saveData } from '../services/dataHandling'
+import { cleanupData, compareData, saveData } from '../services/dataHandling'
 
 import './Form.css'
 
@@ -16,8 +16,9 @@ const FormField = ({setMatch}:any) =>{
 
     const handleSubmitSearch = () =>{
         const result = compareData(busqueda)
-        if(result !== undefined){
-            setMatch(result)
+        console.log(result)
+        if(result?.length !== 0){
+            setMatch('matches')
         } else {
             setMatch(undefined)
         }
