@@ -4,7 +4,7 @@ import { compareData, saveData } from '../services/dataHandling'
 
 import './Form.css'
 
-const FormField = ({setMatch}:any) =>{
+const FormField = ({setMatch, handleClick}:any) =>{
 
     const [maldito, setMaldito] = useState('')
     const [busqueda, setBusqueda] = useState('')
@@ -12,6 +12,7 @@ const FormField = ({setMatch}:any) =>{
     const handleSubmit = () =>{
         if(maldito !== ''){
             saveData(maldito)
+            handleClick()
         }
     }
 
